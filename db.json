@@ -1,0 +1,24 @@
+{
+    "users":[],
+    "ads": [
+        {
+            "id": 1,
+            "author": "@alberto",
+            "product": "bicicleta",
+            "image": "mostrarfoto",
+            "price": "1500",
+            "status": "en venta",
+            "userId": 1
+        },
+        {
+            "id": 2,
+            "author": "@chiquito",
+            "product": "coche",
+            "image": "mostrarfoto",
+            "price": "4000",
+            "status": "en compra",
+            "userId": 2
+
+        }
+    ]
+}

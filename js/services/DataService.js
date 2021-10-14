@@ -20,7 +20,7 @@ export default {
         const response = await fetch(url)
         if (response.ok) {
             const ad = await response.json()
-            return this.parseTweet(ad)
+            return this.parseAd(ad)
         } else {
             if (response.status === 404) {
                 return null
@@ -110,7 +110,7 @@ export default {
         return localStorage.getItem('AUTH_TOKEN') !== null
     },
 
-    deleteTweet: async function(adID) {
+    deleteAd: async function(adID) {
         const url = `http://localhost:8000/api/ads/${adID}`
         return await this.delete(url)
     },

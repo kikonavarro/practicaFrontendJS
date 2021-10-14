@@ -31,18 +31,20 @@ export function loaderView() {
 }
 
 
-export function tweetDetailView(tweet) {
-    if (tweet === null) {
-        return '<h1>:( NO HAY TWEET QUE VALGA</h1>'
+export function adDetailView (ad) {
+    if (ad === null) {
+        return '<h1>:( NO HAY NINGÚN ANUNCIO</h1>'
     }
     let button = ''
-    if (tweet.canBeDeleted) {
+    if (ad.canBeDeleted) {
         button = '<button class="delete">Borrar</button>'
     }
     return `
-        <p style="font-size:2em">${tweet.message}</p>
-        <strong class="author">${tweet.author}</strong> - 
-        <time datetime="${tweet.date}">${tweet.date}</time>
+        <strong class="author">${ad.author}</strong>
+        <p class="product">${ad.product}</p>
+        <p class="image">${ad.image}</p>
+        <p class="price">${ad.price} euros</p>
+        <p class="status">${ad.status} </p>
         ${button}
     `
 }
