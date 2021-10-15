@@ -1,13 +1,13 @@
 export function adsView(ad) {
     return `<a href="/detail.html?id=${ad.id}">
-    <div class="post">
-        <strong class="author">${ad.author}</strong>
-        <p class="product">${ad.product}</p>
-        <p class="image">${ad.image}</p>
+    <div class="card post">
+        <img class="image" src="${ad.image}" alt="no tiene imagen">
+        <h4 class="product card-title">${ad.product}</h4>
         <p class="price">${ad.price} euros</p>
         <p class="status">${ad.status} </p>
+        <strong class="author">${ad.author}</strong>
     </div>
-    <hr>
+    
 </a>` 
     
 }
@@ -37,14 +37,17 @@ export function adDetailView (ad) {
     }
     let button = ''
     if (ad.canBeDeleted) {
-        button = '<button class="delete">Borrar</button>'
+        button = '<button class="rounded mx-auto d-block delete btn btn-danger">Borrar</button>'
     }
     return `
-        <strong class="author">${ad.author}</strong>
-        <p class="product">${ad.product}</p>
-        <p class="image">${ad.image}</p>
-        <p class="price">${ad.price} euros</p>
-        <p class="status">${ad.status} </p>
-        ${button}
+        <div class="card post text-center">
+            <img class="image rounded mx-auto d-block" src="${ad.image}" alt="no tiene imagen">
+            <h4 class="product card-title">${ad.product}</h4>
+            <p class="price">${ad.price} euros</p>
+            <p class="status">${ad.status} </p>
+            <strong class="author">${ad.author}</strong>
+            
+            ${button}
+            </div>        
     `
 }

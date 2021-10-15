@@ -1,5 +1,6 @@
 import ErrorMessageController from './controllers/ErrorMessageController.js'
 import AdListController from './controllers/AdListController.js'
+import SearchController from './controllers/SearchController.js'
 
 window.addEventListener('DOMContentLoaded', function() {
 
@@ -14,4 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // pintar los anuncios
     adListController.showAds()
+
+    const search = document.querySelector('#search')
+    new SearchController(search)
 })

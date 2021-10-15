@@ -8,9 +8,7 @@ export default {
         ad.image = cleanString(ad.image)
         ad.price = cleanString(ad.price)
         ad.status = cleanString(ad.status)
-        
         return ad
-  
     },
 
 	getAds: async function() {

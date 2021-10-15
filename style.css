@@ -55,3 +55,8 @@
     top: 40%;
     left: 40%;
   }
+
+  a {
+    text-decoration: none;
+    color: black
+  }
