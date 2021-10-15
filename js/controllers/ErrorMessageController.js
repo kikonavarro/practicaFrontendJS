@@ -1,6 +1,4 @@
 import { errorView } from "../views.js"
-
-
 export default class ErrorMessageController {
 
     constructor(element) {
@@ -16,7 +14,7 @@ export default class ErrorMessageController {
     }
 
     hideError() {
-        // TODO: mejorar esto para no borrar todo el HTML y mejor ocultarlo
+        
         this.element.innerHTML = ''
     }
 

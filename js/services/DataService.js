@@ -1,11 +1,11 @@
 export default {
 	parseAd: function(ad) {
-        
-		return ad
-	},
+     
+        return ad
+    },
 
 	getAds: async function() {
-		const url = "http://localhost:8000/api/ads/";
+		const url = "http://localhost:8000/api/ads?_expand=user";
 		const response = await fetch(url);
 		if (response.ok) {
 			const ads = await response.json();
@@ -25,31 +25,11 @@ export default {
             if (response.status === 404) {
                 return null
             } else {
-                throw new Error('Error al cargar el tweet')
+                throw new Error('Error al cargar el anuncio')
             }
         }
     },
 
-    getAdsOld: function() {
-        return new Promise(function(resolve, reject) {
-            // llamar a fetch para obtener la respuesta
-            fetch(url).then(function(response){
-                if (response.ok) {
-                    // una vez tengo la respuesta, obtener el JSON
-                    response.json().then(function(data) {
-                        // cuando tenga el JSON, resolver la promesa
-                        resolve(data)
-                    }).catch(function() {
-                        reject('Error al parsear el JSON')
-                    })
-                } else {
-                    reject('Error al cargar los anuncios')
-                }
-            }).catch(function() {
-                reject('Error inesperado')
-            })
-        })
-    },
 
     delete: async function(url, body={}) {
         return await this.request('DELETE', url, body)
@@ -101,9 +81,9 @@ export default {
         localStorage.setItem('AUTH_TOKEN', token)
     },
 
-    createAd: async function(text) {
+    createAd: async function(author, product, image, price) {
         const url = 'http://localhost:8000/api/ads'
-        return await this.post(url, { message: text })
+        return await this.post(url, { author, product, image, price })
     },
 
     isAuthenticed: function() {

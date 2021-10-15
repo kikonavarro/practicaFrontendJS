@@ -34,7 +34,7 @@ export default class MessageController {
     }
 
     hideError() {
-        // TODO: mejorar esto para no borrar todo el HTML y mejor ocultarlo
+        
         this.element.innerHTML = ''
     }
 }

@@ -1,7 +1,7 @@
 import DataService from "../services/DataService.js"
 import PubSub from "../services/PubSub.js"
 
-// TODO no validar cuando dan al botón, con el "enter" vale.
+
 export default class SignupController {
 
     constructor(element) {
