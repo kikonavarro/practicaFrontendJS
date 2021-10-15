@@ -17,9 +17,10 @@ export default class AdFormController {
                 
                 const product = data.get('product')
                 const image = data.get('image')
-                const price = data.get('price') 
+                const price = data.get('price')
+                const status = data.get('status') 
                 try {
-                    const result = await DataService.createAd(product, image, price)
+                    const result = await DataService.createAd(product, image, price, status)
                     PubSub.publish(PubSub.events.SHOW_SUCCESS, 'Anuncio creado!')
                 } catch (error) {
                     PubSub.publish(PubSub.events.SHOW_ERROR, error)

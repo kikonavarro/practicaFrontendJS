@@ -1,12 +1,16 @@
 export default {
 	parseAd: function(ad) {
+        const cleanString = (dirtyString) => { return dirtyString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') }
+        ad.date = ad.date || ad.updatedAt
+        ad.product = cleanString(ad.product)
         ad.author = ad.user.username
-    
+        ad.canBeDeleted = ad.userId === this.getAuthUserId()
+        ad.image = cleanString(ad.image)
+        ad.price = cleanString(ad.price)
+        ad.status = cleanString(ad.status)
         
-    
-    
-     
         return ad
+  
     },
 
 	getAds: async function() {
@@ -86,9 +90,9 @@ export default {
         localStorage.setItem('AUTH_TOKEN', token)
     },
 
-    createAd: async function(product, image, price) {
+    createAd: async function(product, image, price, status) {
         const url = 'http://localhost:8000/api/ads'
-        return await this.post(url, { product, image, price })
+        return await this.post(url, { product, image, price, status })
     },
 
     isAuthenticed: function() {
