@@ -1,5 +1,10 @@
 export default {
 	parseAd: function(ad) {
+        ad.author = ad.user.username
+    
+        
+    
+    
      
         return ad
     },
@@ -81,9 +86,9 @@ export default {
         localStorage.setItem('AUTH_TOKEN', token)
     },
 
-    createAd: async function(author, product, image, price) {
+    createAd: async function(product, image, price) {
         const url = 'http://localhost:8000/api/ads'
-        return await this.post(url, { author, product, image, price })
+        return await this.post(url, { product, image, price })
     },
 
     isAuthenticed: function() {

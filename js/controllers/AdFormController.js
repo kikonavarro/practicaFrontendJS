@@ -14,12 +14,12 @@ export default class AdFormController {
 
             if (this.element.checkValidity()) {
                 const data = new FormData(this.element)
-                const author = data.get ('author')
+                
                 const product = data.get('product')
                 const image = data.get('image')
                 const price = data.get('price') 
                 try {
-                    const result = await DataService.createAd(author, product, image, price)
+                    const result = await DataService.createAd(product, image, price)
                     PubSub.publish(PubSub.events.SHOW_SUCCESS, 'Anuncio creado!')
                 } catch (error) {
                     PubSub.publish(PubSub.events.SHOW_ERROR, error)
