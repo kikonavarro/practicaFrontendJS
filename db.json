@@ -1,24 +1,53 @@
 {
-    "users":[],
+    "users": [
+      {
+        "username": "1",
+        "password": "$2b$10$iB9jZnN3HQg8b6okBowIt.TDmIVvstmi2f5ZSomX8g/Vzj2B2s7em",
+        "id": 1
+      },
+      {
+        "username": "2",
+        "password": "$2b$10$sYZG.cX/esWpsYLKhBU7G.F/CBguY7JEuezlI3RmBEWH5q/i2hsIO",
+        "id": 2
+      },
+      {
+        "username": "kiko",
+        "password": "$2b$10$Ns6dKLYlEON0F99wDbqjzOUfYVUsx3CdRiuHoUVu0BxlmIKOursfy",
+        "id": 3
+      },
+      {
+        "username": "pedro",
+        "password": "$2b$10$GdFmG1ikXS6OGEF.sspwdu.Tu2H00VsV13rzoRw1a.Q601SoHFuty",
+        "id": 4
+      }
+    ],
     "ads": [
-        {
-            "id": 1,
-            "author": "@alberto",
-            "product": "bicicleta",
-            "image": "mostrarfoto",
-            "price": "1500",
-            "status": "en venta",
-            "userId": 1
-        },
-        {
-            "id": 2,
-            "author": "@chiquito",
-            "product": "coche",
-            "image": "mostrarfoto",
-            "price": "4000",
-            "status": "en compra",
-            "userId": 2
-
-        }
+      {
+        "product": "moto",
+        "image": "https://cdn.pixabay.com/photo/2016/04/07/06/53/bmw-1313343_960_720.jpg",
+        "price": "3000",
+        "status": "vendo",
+        "userId": 1,
+        "updatedAt": "2021-10-15T20:34:50.816Z",
+        "id": 6
+      },
+      {
+        "product": "coche",
+        "image": "https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg",
+        "price": "120000",
+        "status": "vendo",
+        "userId": 2,
+        "updatedAt": "2021-10-15T20:42:58.544Z",
+        "id": 7
+      },
+      {
+        "product": "Bicicleta",
+        "image": "https://cdn.pixabay.com/photo/2016/01/19/14/55/mountain-bike-1149074_960_720.jpg",
+        "price": "999",
+        "status": "compro",
+        "userId": 4,
+        "updatedAt": "2021-10-16T15:10:08.467Z",
+        "id": 20
+      }
     ]
-}
+  }
