@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function(){
     new AdFormController(form)
 
     // 3. Seleccionamos el nodo para mostrar mensajes de error
-    const messages = document.querySelector('.messages')
+    const messages = document.querySelector('.error-message')
 
     // 4. Crear una instancia de ErrorMessageController
     new MessageController(messages)

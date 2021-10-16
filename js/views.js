@@ -1,7 +1,7 @@
 export function adsView(ad) {
     return `<a href="/detail.html?id=${ad.id}">
-    <div class="card post">
-        <img class="image" src="${ad.image}" alt="no tiene imagen">
+    <div class="card border-3">
+        <img class="image" style="height: 200px" src="${ad.image}" alt="no tiene imagen">
         <h4 class="product card-title">${ad.product}</h4>
         <p class="price">${ad.price} euros</p>
         <p class="status">${ad.status} </p>
@@ -73,7 +73,7 @@ export function adDetailView (ad) {
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-success" id="search" type="submit">Search</button>
             </form>
           </div>
         </div>

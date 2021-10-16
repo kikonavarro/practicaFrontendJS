@@ -1,5 +1,7 @@
 import { adsView } from "../views.js"
 import DataService from "../services/DataService.js"
+import PubSub from "../services/PubSub.js";
+
 
 export default class AdListController {
     
@@ -18,6 +20,8 @@ export default class AdListController {
             }
         } catch (error) {
             this.errorMessageController.showError(error)
+        } finally {
+            PubSub.publish(PubSub.events.HIDE_LOADING)
         }
     }
 }
