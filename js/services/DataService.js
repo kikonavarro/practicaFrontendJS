@@ -27,7 +27,8 @@ export default {
 		const response = await fetch(url);
 		if (response.ok) {
 			const ads = await response.json();
-			return ads;
+			return ads
+
 		} else {
 			throw new Error('Error al cargar los anuncios')
 		}
