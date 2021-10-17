@@ -30,9 +30,11 @@ export default class AdListController {
     }
 
     async showAdsSearched (searchProduct) {       
-         try {
+        try {
             const ads = await DataService.getAdsSearched(searchProduct)
             for (const ad of ads) {
+                if (searchProduct !== '')
+                this.element.innerHTML =''
                 const adElement = document.createElement('article')
                 adElement.innerHTML = adsView(ad)
                 this.element.appendChild(adElement)

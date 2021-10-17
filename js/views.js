@@ -71,9 +71,9 @@ export function adDetailView (ad) {
                 <a class="nav-link" href="signup.html" tabindex="-1" aria-disabled="true">Crear Usuario</a>
               </li>
             </ul>
-            <form class="d-flex">
+            <div class="d-flex">
               <input class="form-control me-2" type="search" id="search" placeholder="Buscar por producto" aria-label="Search">
-            </form>
+            </div>
           </div>
         </div>
       </nav>`
