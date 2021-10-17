@@ -26,7 +26,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // pintar los anuncios
     adListController.showAds()
-
+    
     const search = document.querySelector('#search')
     new SearchController(search)
+    
 })

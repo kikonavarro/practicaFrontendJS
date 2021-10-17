@@ -1,3 +1,6 @@
+import PubSub from "../services/PubSub.js"; 
+
+
 const debounce = (func, timeout = 300) => {
     let timer;
     return (...args) => {
@@ -15,7 +18,10 @@ export default class SearchController {
 
     attachEventListeners() {
         this.element.addEventListener('input', debounce(() => {
-            console.log('PUBLISH', 'SEARCH', this.element.value)
+            
+            const searchProduct = this.element.value
+            //console.log('PUBLISH', 'SEARCH', this.element.value)
+            PubSub.publish(PubSub.events.SEARCH_PRODUCT, searchProduct)
         }, 1000))
     }
 

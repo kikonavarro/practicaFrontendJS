@@ -22,6 +22,18 @@ export default {
 		}
 	},
 
+    getAdsSearched: async function(searchProduct) {
+		const url = `http://localhost:8000/api/ads?product_like=${searchProduct}`;
+		const response = await fetch(url);
+		if (response.ok) {
+			const ads = await response.json();
+			return ads;
+		} else {
+			throw new Error('Error al cargar los anuncios')
+		}
+	},
+
+
 	getAdDetail: async function(adID) {
         const url = `http://localhost:8000/api/ads/${adID}?_expand=user`
         const response = await fetch(url)
@@ -60,7 +72,6 @@ export default {
         }
         if (this.isAuthenticed()) {
             const token = localStorage.getItem('AUTH_TOKEN')
-            // requestConfig.headers.Authorization = `Bearer ${token}`
             requestConfig.headers['Authorization'] = `Bearer ${token}`
         }
         const response = await fetch(url, requestConfig)

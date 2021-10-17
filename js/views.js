@@ -72,11 +72,11 @@ export function adDetailView (ad) {
               </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" id="search" type="submit">Search</button>
+              <input class="form-control me-2" type="search" id="search" placeholder="Buscar por producto" aria-label="Search">
             </form>
           </div>
         </div>
       </nav>`
 }
 
+//<button class="btn btn-outline-success" type="button">Buscar</button>
