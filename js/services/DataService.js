@@ -99,12 +99,11 @@ export default {
         const token = data.accessToken
         localStorage.setItem('AUTH_TOKEN', token)
     },
-
+    // Habría que implementar en el backend una función para logout
     // logout: async function(token) {
-    //     const url = 'http://localhost:8000/auth/login'
-    //     const data = await this.delete(url, {username, password})
-    //     const token = data.accessToken
-    //     localStorage.setItem('AUTH_TOKEN', token)
+    //     const url = 'http://localhost:8000/auth/logout'
+    //     const data = await this.delete(url, token)
+    //     localStorage.removeItem('AUTH_TOKEN')
     // },
 
     createAd: async function(product, image, price, status) {

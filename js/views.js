@@ -68,7 +68,7 @@ export function adDetailView (ad) {
                 <a class="nav-link" href="login.html">Login</a>
               </li>
               <li class="nav-item logout">
-                <a class="nav-link" href="index.html">Logout</a>
+                <a class="nav-link" href="index.html" onclick="localStorage.removeItem('AUTH_TOKEN');">Logout</a>
               </li>
               <li class="nav-item signup">
                 <a class="nav-link" href="signup.html" tabindex="-1" aria-disabled="true">Crear Usuario</a>
