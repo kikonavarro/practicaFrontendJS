@@ -11,7 +11,8 @@ export default class NavBarController {
         // si no está logueado mostramos la barra entera para que pueda hacer Login o Crear usuario
         if (DataService.isAuthenticed() === false) {
             this.element.innerHTML = navBarView()
-            //const createAd = 
+            document.querySelector('.logout').style.display ='none'
+             
         } else {
             // si el usuario está logueado pintamos la barra mostrando el botón de crear anuncio
             this.element.innerHTML = navBarView()

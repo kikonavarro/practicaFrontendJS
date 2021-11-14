@@ -67,6 +67,9 @@ export function adDetailView (ad) {
               <li class="nav-item login">
                 <a class="nav-link" href="login.html">Login</a>
               </li>
+              <li class="nav-item logout">
+                <a class="nav-link" href="index.html">Logout</a>
+              </li>
               <li class="nav-item signup">
                 <a class="nav-link" href="signup.html" tabindex="-1" aria-disabled="true">Crear Usuario</a>
               </li>

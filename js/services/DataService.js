@@ -100,6 +100,13 @@ export default {
         localStorage.setItem('AUTH_TOKEN', token)
     },
 
+    // logout: async function(token) {
+    //     const url = 'http://localhost:8000/auth/login'
+    //     const data = await this.delete(url, {username, password})
+    //     const token = data.accessToken
+    //     localStorage.setItem('AUTH_TOKEN', token)
+    // },
+
     createAd: async function(product, image, price, status) {
         const url = 'http://localhost:8000/api/ads'
         return await this.post(url, { product, image, price, status })

@@ -9,7 +9,7 @@ export default class SignupController {
         this.attachEventListeners()
     }
 
-    checkIfPasswordsAreEqual() {
+    checkIfAllPasswordsAreEqual() {
         const inputsPassword = this.element.querySelectorAll('input[type="password"]')
 
         // guardo las contraseñas que hay en los inputs
